@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+    This file is used to specify which files to include and exclude from backups.
+    For more information, see the documentation at:
+    https://developer.android.com/guide/topics/data/autobackup
+    -->
+</full-backup-content>

@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+
+# App
+app/build/
+
+# Local files
+local.properties
+*.log
+debug.keystore
+keystore.properties
+
+# APKs
+*.apk
+*.aab
+*.ap_
+*.apks
+
+# Other
+*.dex
+*.class
