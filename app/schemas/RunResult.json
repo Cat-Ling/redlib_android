@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RunResult",
+  "description": "Event representing the final result of a process execution.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "RunResult"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the run."
+    },
+    "exitCode": {
+      "type": "integer",
+      "description": "The exit code of the process."
+    },
+    "durationMs": {
+      "type": "integer",
+      "description": "The total execution time in milliseconds."
+    },
+    "stdoutSummary": {
+      "type": "string",
+      "description": "A summary of the standard output."
+    },
+    "stderrSummary": {
+      "type": "string",
+      "description": "A summary of the standard error."
+    },
+    "logsPath": {
+      "type": "string",
+      "description": "The path to the persisted log file for the run."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of when the event was generated."
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "exitCode",
+    "durationMs",
+    "timestamp"
+  ]
+}

@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "redlib version 1.2.3"
