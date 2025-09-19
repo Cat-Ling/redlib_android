@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DiagnosticsCollected",
+  "description": "Event representing the collection of a diagnostics bundle.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "DiagnosticsCollected"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the diagnostics collection."
+    },
+    "bundlePath": {
+      "type": "string",
+      "description": "Path to the diagnostics bundle (e.g., a zip file)."
+    },
+    "size": {
+      "type": "integer",
+      "description": "Size of the bundle in bytes."
+    },
+    "scrubbed": {
+      "type": "boolean",
+      "description": "Whether the bundle has been scrubbed of sensitive information."
+    }
+  },
+  "required": ["type", "id", "bundlePath", "size", "scrubbed"]
+}
