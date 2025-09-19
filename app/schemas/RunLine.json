@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RunLine",
+  "description": "Event representing a single line of output from a running process.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "RunLine"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the run."
+    },
+    "stream": {
+      "type": "string",
+      "description": "The output stream the line came from.",
+      "enum": ["stdout", "stderr"]
+    },
+    "text": {
+      "type": "string",
+      "description": "The text content of the line."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of when the event was generated."
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "stream",
+    "text",
+    "timestamp"
+  ]
+}

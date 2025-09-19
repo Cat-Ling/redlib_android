@@ -1,0 +1,38 @@
+# Android Studio
+.gradle
+.idea/
+*.iml
+local.properties
+/build
+/captures
+
+# Gradle
+build/
+.gradletasknamecache
+gradle-app.setting
+
+# Android
+/app/build
+/app/libs
+/app/release
+/app/debug
+*.apk
+*.ap_
+*.aab
+
+# IntelliJ
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# Mac
+.DS_Store
+
+# User-specific
+/keystores/
+google-services.json
+
+# Generated
+**/R.java
+**/BuildConfig.java

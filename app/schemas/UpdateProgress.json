@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UpdateProgress",
+  "description": "Event indicating the progress of an update operation.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "UpdateProgress"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the update operation."
+    },
+    "phase": {
+      "type": "string",
+      "description": "The current phase of the update.",
+      "enum": ["fetch", "verify", "extract", "sanity", "swap"]
+    },
+    "bytesDownloaded": {
+      "type": "integer",
+      "description": "The number of bytes downloaded so far."
+    },
+    "totalBytes": {
+      "type": "integer",
+      "description": "The total size of the download in bytes."
+    },
+    "percent": {
+        "type": "number",
+        "description": "The progress of the download as a percentage."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of when the event was generated."
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "phase",
+    "bytesDownloaded",
+    "timestamp"
+  ]
+}
